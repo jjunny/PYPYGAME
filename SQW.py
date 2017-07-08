@@ -81,33 +81,21 @@ def __main__():
                         if (event.pos[0], event.pos[1]) == (x, y):
                             print("go straight")
                             Action.execution_list.append("go_straight")
-                            Map.ourScreen.blit(Map.straight_f, (Map.function_x, Map.function_y))
-                            Map.function_x += 50
-                            Map.function_y += 55
                 for x in range(630, 690):
                     for y in range(35, 90):
                         if (event.pos[0], event.pos[1]) == (x, y):
                             print("turn left")
                             Action.execution_list.append("turn_left")
-                            Map.ourScreen.blit(Map.left_f, (Map.function_x, Map.function_y))
-                            Map.function_x += 50
-                            Map.function_y += 55
                 for x in range(705, 765):
                     for y in range(35, 90):
                         if (event.pos[0], event.pos[1]) == (x, y):
                             print("turn right")
                             Action.execution_list.append("turn_right")
-                            Map.ourScreen.blit(Map.right_f, (Map.function_x, Map.function_y))
-                            Map.function_x += 50
-                            Map.function_y += 55
                 for x in range(555, 615):
                     for y in range(110, 165):
                         if (event.pos[0], event.pos[1]) == (x, y):
                             print("action")
                             Action.execution_list.append("action")
-                            Map.ourScreen.blit(Map.action_f, (Map.function_x, Map.function_y))
-                            Map.function_x += 50
-                            Map.function_y += 55
                 for x in range(630, 690):
                     for y in range(110, 165):
                         if (event.pos[0], event.pos[1]) == (x, y):
@@ -147,7 +135,6 @@ def __main__():
         Action.quit(665, 180)
         Map.ourScreen.blit(Action.arrow_status[status_count], (Map.current_x, Map.current_y))
         pg.display.flip()
-
 
 if __name__ == '__main__':
     __main__()
